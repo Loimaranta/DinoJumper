@@ -16,8 +16,8 @@
  * Connectors
  * 
  * Author: Topias Yrjölä, Matti Loimaranta, Arttu Huttunen
- * Emails: tokryr@utu.fi, makalo@utu.fi, arhutt@utu.fi
- * Created on tähän se koska se og dinojump tehtiin
+ * Emails: tokryr@utu.fi, makalo@utu.fi, arhutt@utu.fi.
+ * Created on 18 December 2020, 19:48
  * Version 2.0
  */
 
@@ -26,8 +26,13 @@
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
 #define PWM_PERIOD (0x0FFF)
+
+// 1-255 Set this as value for when the servo is pressing spacebar down
 #define SERVO_DOWN (0x00FF)
+// 1-255 Set this as value for when the servo is not pressing
 #define SERVO_UP (0x00DC)
+// LDR gives adc value of 0-1023
+// Threshold that once the value crosses the dino jumps
 #define JUMPTHRESHOLD (700)
 
 
